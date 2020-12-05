@@ -16,10 +16,11 @@ public class Tournament implements CORE
     
     //**************** CORE ************************** 
     //Constructor requires the name of the player
-    String player = "";
+    //@
+    String playerName;
     public Tournament(String pl)
     {
-       
+       pl = playerName; 
     }
     
     
@@ -35,7 +36,8 @@ public class Tournament implements CORE
      * team,(or, "No champions" if team is empty)
      */
     public String toString() {
-        
+        String state;
+      
         return "";
      }
   

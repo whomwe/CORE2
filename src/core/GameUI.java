@@ -23,7 +23,7 @@ public class GameUI
         {
             System.out.println("Enter player's name");
             String s = myIn.nextLine();
-            myIn.nextLine();
+            // myIn.nextLine();
             tr = new Tournament(s); // create
             choice = 100;
             while (choice != 0 )
@@ -35,11 +35,11 @@ public class GameUI
                 }
                 else if (choice == 2)
                 {
-                    System.out.println(tr.isInReserve(s));
+                    System.out.println("\n" + tr.getTeam());
                 }
                 else if (choice == 3)
                 {
-                    System.out.println("Please enter a champion");
+                    System.out.println("Please enter a Champion");
                 } 
                 else if (choice == 4)
                 {   
