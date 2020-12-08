@@ -12,18 +12,17 @@ import java.io.*;
 public class Tournament implements CORE
 {
     // Fields
-    
+     
     
     //**************** CORE ************************** 
     //Constructor requires the name of the player
-    //@
-    String playerName;
+    //@param p1 represents the name of the player
     public Tournament(String pl)
     {
-       pl = playerName; 
+       
     }
     
-    
+     
     //******* Implements interface CORE *******************
     /**Returns a String representation of the state of the game,
      * including the name of the player, state of the treasury,
@@ -36,7 +35,8 @@ public class Tournament implements CORE
      * team,(or, "No champions" if team is empty)
      */
     public String toString() {
-        String state;
+    //     getClass().getName() + '@' + Integer.toHexString(hashCode())
+            
       
         return "";
      }
@@ -55,15 +55,17 @@ public class Tournament implements CORE
      * @returns the amount of money in the Treasury
      */
     public int getMoney(){
-        
-       return 0;
+        int Treasury = 1000;
+       return Treasury;
     }    
     
     /**Returns a String representation of all champions in reserve
      * @return a String representation of all champions in reserve
      **/
     public String getReserve(){
-        
+     Champions c1 = new Wizard("Ganfrank", 5, 4);
+     c1.toString();
+     
        return "";
     }
        
@@ -80,7 +82,7 @@ public class Tournament implements CORE
     * @return true if champion in reserve, false otherwise
     */
     public boolean isInReserve(String nme) {
-        
+      
         return false;
     }
     
@@ -96,8 +98,7 @@ public class Tournament implements CORE
      * @return as shown above
      **/        
     public int enterChampion(String nme){
-        
-        
+     
        return 0;
     }
     
@@ -144,10 +145,17 @@ public class Tournament implements CORE
      * @param num is the number of the challenge
      * @returns true if the number represents a challenge
      **/
+    
+
+ public String setupChallenges(int num){
+  
+     return "";}
+     
      public boolean isChallenge(int num){
-        
+         
        return false;
     }
+     
      
     /** Provides a String representation of an challenge given by 
      * the challenge number
@@ -157,7 +165,7 @@ public class Tournament implements CORE
      **/
     public String getChallenge(int num){
         
-       return "";
+    return "";
     }
     
     /** Provides a String representation of all challenges 
@@ -216,6 +224,7 @@ public class Tournament implements CORE
         
     }
 }
+
 
 
 

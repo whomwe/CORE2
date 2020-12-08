@@ -39,13 +39,16 @@ public class GameUI
                 }
                 else if (choice == 3)
                 {
-                    System.out.println("Please enter a Champion");
+                    System.out.println("Please enter a Champion Number");
+                    String nme = (myIn.nextLine()).trim();
                 } 
                 else if (choice == 4)
                 {   
                     System.out.println("Enter Champion name");
                     String nme = (myIn.nextLine()).trim();
                     result = tr.enterChampion(nme);
+                    System.out.println("The Champion has entered your team");
+                    
                     // code omitted
                     // display message appropriate to result
                     
@@ -65,7 +68,7 @@ public class GameUI
                 }
                 else if (choice==6)
                 {
-                    // code omitted
+                    
                 }  
                 else if (choice==7)
                 {
@@ -87,7 +90,7 @@ public class GameUI
         catch (IOException e) {System.out.println (e);}   
         System.out.println("Thank-you");
     }
-    
+        
     private static int getMenuItem()throws IOException
     {   int choice = 100;  
         System.out.println("\nMain Menu");
