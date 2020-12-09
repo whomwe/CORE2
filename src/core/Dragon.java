@@ -13,9 +13,9 @@ public class Dragon extends Champions {
     
     private boolean talks;
     
-Dragon(String name, int skillLvl, int entryFee){
+Dragon(String name, ChampionState state, int skillLvl, int entryFee){
     
-    super(name, skillLvl, entryFee);
+    super(name, state, skillLvl, entryFee);
     super.setChampEntryFee(500);
     super.setChampSkillLvl(7);
 }

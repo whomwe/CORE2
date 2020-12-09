@@ -12,14 +12,17 @@ import java.io.*;
 public class Tournament implements CORE
 {
     // Fields
-     
+    ArrayList<Champions> allChampions = new ArrayList<Champions>();
+    ArrayList<Challenges> allChallenges = new ArrayList<Challenges>(); 
+    
+   
     
     //**************** CORE ************************** 
     //Constructor requires the name of the player
     //@param p1 represents the name of the player
     public Tournament(String pl)
     {
-       
+     
     }
     
      
@@ -35,9 +38,6 @@ public class Tournament implements CORE
      * team,(or, "No champions" if team is empty)
      */
     public String toString() {
-    //     getClass().getName() + '@' + Integer.toHexString(hashCode())
-            
-      
         return "";
      }
   
@@ -55,17 +55,18 @@ public class Tournament implements CORE
      * @returns the amount of money in the Treasury
      */
     public int getMoney(){
-        int Treasury = 1000;
-       return Treasury;
+      int money = 100;
+       return money;
     }    
     
     /**Returns a String representation of all champions in reserve
      * @return a String representation of all champions in reserve
      **/
     public String getReserve(){
-     Champions c1 = new Wizard("Ganfrank", 5, 4);
-     c1.toString();
+        
+       
      
+    
        return "";
     }
        
@@ -78,17 +79,18 @@ public class Tournament implements CORE
     }
     
     /** returns whether champion is in reserve
-    * @param champion's name
+    * @param nme is the champion's name
     * @return true if champion in reserve, false otherwise
     */
     public boolean isInReserve(String nme) {
+       
       
         return false;
     }
     
  // ***************** Players Team************************   
     /** Allows a champion to be entered for the player's team, if there 
-     * is enough money in the Treasury for the entry fee.The champion's 
+     * is enough money in the Treasury for the entry fee.The champions 
      * state is set to "active"
      * 0 if champion is entered in the player's team, 
      * 1 if champion is not in reserve, 
@@ -98,6 +100,8 @@ public class Tournament implements CORE
      * @return as shown above
      **/        
     public int enterChampion(String nme){
+      
+        
      
        return 0;
     }
@@ -146,11 +150,6 @@ public class Tournament implements CORE
      * @returns true if the number represents a challenge
      **/
     
-
- public String setupChallenges(int num){
-  
-     return "";}
-     
      public boolean isChallenge(int num){
          
        return false;
@@ -164,6 +163,8 @@ public class Tournament implements CORE
      * the challenge number
      **/
     public String getChallenge(int num){
+        
+      
         
     return "";
     }
@@ -221,10 +222,65 @@ public class Tournament implements CORE
      * @param filename of the comma-separated textfile storing information about challenges
      */
     public void readChallenges(String filename){
-        
     }
+    
+    //*************************************** Private Classes************************
+        private void setupChampions(){
+        Champions c1 = new Wizard("Garfunk", ChampionState.WAITING, 7, 400 , true, "transmutation");
+        Champions c2 = new Wizard("Rudolf", ChampionState.WAITING , 6, 400, true, "invisibility");
+        Champions c3 = new Warrior("Elbond", ChampionState.WAITING , 1, 150, "sword");
+        Champions c4 = new Warrior("Flimsi", ChampionState.WAITING , 2, 200, "bow");
+        Champions c5 = new Dragon("Drabina",ChampionState.WAITING, 7, 500);
+        Champions c6 = new Dragon("Golum", ChampionState.WAITING, 7, 500);
+        Champions c7 = new Warrior("Argon", ChampionState.WAITING, 9, 900, "mace");
+        Champions c8 = new Wizard("Neon", ChampionState.WAITING, 2, 300, false, "");
+        Champions c9 = new Dragon("Xenon", ChampionState.WAITING, 7, 500);
+        Champions c10 = new Warrior("Atlanta", ChampionState.WAITING, 5, 500, "bow");
+        Champions c11 = new Wizard ("Krypton", ChampionState.WAITING, 8, 300, false, "fireballs");
+        Champions c12 = new Wizard ("Hedwig", ChampionState.WAITING, 1, 400, true, "flying");
+            allChampions.add(c1);
+            allChampions.add(c2);
+            allChampions.add(c3);
+            allChampions.add(c4);
+            allChampions.add(c5);
+            allChampions.add(c6);
+            allChampions.add(c7);
+            allChampions.add(c8);
+            allChampions.add(c9);
+            allChampions.add(c10);
+            allChampions.add(c11);
+            allChampions.add(c12);
+        }
+      
+        
+        
+        private void setupChallenges(){
+        Challenges ch1 = new Challenges(1, ChallengeType.MAGIC,"Borg",3,100 );
+        Challenges ch2 = new Challenges(2, ChallengeType.FIGHT, "Huns",3, 120);
+        Challenges ch3 = new Challenges(3, ChallengeType.MYSTERY, "Ferengi",3, 150);
+        Challenges ch4 = new Challenges(4, ChallengeType.MAGIC, "Vandal",9,200);
+        Challenges ch5 = new Challenges(5, ChallengeType.MYSTERY, "Borg",7,90);
+        Challenges ch6 = new Challenges(6, ChallengeType.FIGHT, "Goth",8,45);
+        Challenges ch7 = new Challenges(7, ChallengeType.MAGIC, "Frank",10,200);
+        Challenges ch8 = new Challenges(8, ChallengeType.FIGHT, "Sith",10,170);
+        Challenges ch9 = new Challenges(9, ChallengeType.MYSTERY, "Cardashian",9,300);
+        Challenges ch10 = new Challenges(10, ChallengeType.FIGHT, "Jute",2,300);
+        Challenges ch11 = new Challenges(11, ChallengeType.MAGIC, "Celt",2,250);
+        Challenges ch12 = new Challenges(12, ChallengeType.MYSTERY, "Celt",1,250);
+            allChallenges.add(ch1);
+            allChallenges.add(ch2);
+            allChallenges.add(ch3);
+            allChallenges.add(ch4);
+            allChallenges.add(ch5);
+            allChallenges.add(ch6);
+            allChallenges.add(ch7);
+            allChallenges.add(ch8);
+            allChallenges.add(ch9);
+            allChallenges.add(ch10);
+            allChallenges.add(ch11);
+            allChallenges.add(ch12);
+        }
+       
+        
 }
-
-
-
 

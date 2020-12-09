@@ -13,17 +13,12 @@ import java.util.*;
 public class Wizard extends Champions {
 
 private int entFee;    
-private String spellSpeciality; 
-private boolean necromancer = false;
+private boolean necromancer;
 
-public Wizard(String name, int skillLvl, int entryFee){
-  super(name, skillLvl, entryFee);
-  
+public Wizard(String name, ChampionState state, int skillLvl, int entryFee, boolean necromancer, String spellSpeciality){
+  super(name, state, skillLvl, entryFee);
   super.setChampEntryFee(300);
-  
-  if(isNecromancer()){
-  super.setChampEntryFee(400);
-  };
+ 
 }
 
 public void setEntryFee(int finalFee){
@@ -34,11 +29,5 @@ public void setEntryFee(int finalFee){
 public String hasSpells(){
     return "";}
 
-public boolean isNecromancer(){
-    
-return necromancer;
-}
-    
-    
-    
+  
 }

@@ -18,7 +18,7 @@ public class Champions {
 //*@param name is the name of the champion
 //*@param skillLvl is the skill level of the champion
 //*@param entryFee is the entry fee of the Champion   
-public Champions(String name, int skillLvl, int entryFee){
+public Champions(String name, ChampionState state, int skillLvl, int entryFee){
     this.name = name;
     this.skillLvl= skillLvl;
     this.entryFee = entryFee;
@@ -45,11 +45,15 @@ public int getChampSkillLvl(){
 return skillLvl;
 }
 
-public int champEntryFee(){
+public int getGhampEntryFee(){
 return entryFee;
 }
+
+
+}
+
 
  
 
   
-        }
+        

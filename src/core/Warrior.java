@@ -14,18 +14,19 @@ public class Warrior extends Champions {
     
     private String weapon;
     private int skill;
+    private int Fee;
     
-    Warrior(String name, int skillLvl, int entryFee){
-        super(name, skillLvl, entryFee);
-        this.skillLvl(skill);
+    Warrior(String name, ChampionState state, int skillLvl, int entryFee, String weapon){
+        super(name, state, skillLvl, entryFee);
+        skillLvl = skill;
+        entryFee = Fee;
     }
 
 public String getWeapon(){
-
 return weapon;}  
 
-public int skillLvl(int Lvl){
-    skill = Lvl / 100;
+public int getSkillLvl(){
+    skill = Fee / 100;
 return skill;}
 
 }

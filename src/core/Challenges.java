@@ -17,7 +17,7 @@ public class Challenges {
    private int skillReq;
    private int reward;
    
-   Challenges(int challNum, String enemyNme, int skillReq, int reward){
+   Challenges(int challNum, ChallengeType challType,  String enemyNme, int skillReq, int reward){
    this.challNum = challNum;
    this.enemyNme = enemyNme;
    this.skillReq = skillReq;

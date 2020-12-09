@@ -36,14 +36,18 @@ public class GameUI
                 else if (choice == 2)
                 {
                     System.out.println("\n" + tr.getTeam());
+                
                 }
                 else if (choice == 3)
                 {
+                   
                     System.out.println("Please enter a Champion Number");
                     String nme = (myIn.nextLine()).trim();
+                
                 } 
                 else if (choice == 4)
-                {   
+                {
+                    
                     System.out.println("Enter Champion name");
                     String nme = (myIn.nextLine()).trim();
                     result = tr.enterChampion(nme);
@@ -53,9 +57,11 @@ public class GameUI
                     // display message appropriate to result
                     
                     System.out.println("\n" + output + "\nTreasury = £" + tr.getMoney());
+                
                 }
                 else if (choice == 5)
                 {
+                    
                     System.out.println("Enter number of the challenge");
                     String chal = myIn.nextLine();
                     int number = Integer.parseInt(chal);
@@ -65,6 +71,7 @@ public class GameUI
                     }
                     output = processChallengeResult(result);
                     System.out.println("\n" + output + "\nTreasury = " + tr.getMoney());
+                
                 }
                 else if (choice==6)
                 {
